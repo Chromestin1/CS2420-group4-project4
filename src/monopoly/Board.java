@@ -1,27 +1,33 @@
 package monopoly;
 
+import java.util.HashMap;
+
 public class Board {
 
-	private String boardSquares;
-	private int landingCounts;
-	private int totalMoves;
-	
-	/*
-	 * TODO
-	 */
-	public int getLandingCounts() {
-		return 0;
-	}
-	
-	/*
-	 * TODO
-	 */
-	public void land(int index) {
-		
-	}
-	
-	public void restartGame() {
-		
-	}
+	private static String [] boardSquares = {"Go", "Mediterranean Avenue", "Community Chest", "Baltic Avenue", "Income Tax", "Reading Railroad", 
+			"Oriental Avenue", "Chance", "Vermont Avenue", "Connecticut Avenue", "Just Visiting/Jail", "St. Charles Place", 
+			"Electric Company", "States Avenue", "Virginia Avenue", "Pennsylvania Railroad", "St. James Place", "Community Chest", 
+			"Tennessee Avenue", "New York Avenue", "Free Parking", "Kentucky Avenue", "Chance", "Indiana Avenue", "Illinois Avenue",
+			"B&O Railroad", "Atlantic Avenue", "Ventnor Avenue", "Water Works", "Marvin Gardens", "Go To Jail", "Pacific Avenue",
+			"North Carolina Avenue", "Community Chest", "Pennsylvania Avenue", "Short Line Railroad", "Chance", "Park Place",
+			"Luxury Tax", "Boardwalk"};
 
+	private static HashMap<String, Integer> landingCounts;
+	
+	private static int totalMoves = 0;
+
+	public static HashMap<String, Integer> getLandingCounts(){
+		return landingCounts;
+	}
+	
+	public static void land(int index) {
+		String space = boardSquares[index];
+		landingCounts.put(space, landingCounts.getOrDefault(space, 0) + 1);
+		totalMoves ++;	
+	}
+	
+	public static void restartGame() {
+		totalMoves = 0;
+		landingCounts.clear();
+	}
 }
