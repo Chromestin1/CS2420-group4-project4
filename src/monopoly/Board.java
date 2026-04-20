@@ -2,26 +2,26 @@ package monopoly;
 
 public class Board {
 
-	private String name;
+	private String boardSquares;
+	private int landingCounts;
 	private int totalMoves;
 	
 	/*
 	 * TODO
 	 */
-	public void discardPile() {
-		
+	public int getLandingCounts() {
+		return 0;
 	}
 	
 	/*
 	 * TODO
 	 */
-	public void reshuffle() {
+	public void land(int index) {
 		
 	}
 	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	public void restartGame() {
+		
 	}
 
 }
