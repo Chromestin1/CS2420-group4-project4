@@ -51,7 +51,7 @@ public class GameDriver {
      */
     public static Results runSimulation(int n, JailStrategy j) {
         Board.restartGame();
-        turnEngine engine = new turnEngine();
+        TurnEngine engine = new TurnEngine();
 
         for (int i = 0; i < n; i++) {
             engine.takeTurn(j);
