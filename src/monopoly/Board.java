@@ -12,7 +12,7 @@ public class Board {
 			"North Carolina Avenue", "Community Chest", "Pennsylvania Avenue", "Short Line Railroad", "Chance", "Park Place",
 			"Luxury Tax", "Boardwalk"};
 
-	private static HashMap<String, Integer> landingCounts;
+	private static HashMap<String, Integer> landingCounts = new HashMap<>(); 
 	
 	private static int totalMoves = 0;
 
