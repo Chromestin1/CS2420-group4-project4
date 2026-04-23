@@ -30,4 +30,8 @@ public class Board {
 		totalMoves = 0;
 		landingCounts.clear();
 	}
+
+	public static String getSquare(int index) {	//getSquare method to help with TurnEngine
+		return boardSquares[index];
+	}
 }
