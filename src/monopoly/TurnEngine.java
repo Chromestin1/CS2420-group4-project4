@@ -6,18 +6,32 @@ public class TurnEngine {
 
 	private int die1;
 	private int die2;
-	private Board board;
 	private Deck deck;
 	private boolean inJail;
 	private int consectiveDoubles;
 	private Random random;
 	private int jailCardCount;
+	private int playerPosition;
+	
+	
+	/*
+	 * constructor
+	 */
+	public TurnEngine() {
+		random = new Random();
+		deck = new Deck();
+		inJail = false;
+		consectiveDoubles = 0;
+		jailCardCount = 0;
+		playerPosition = 0;
+	}
 	
 	/*
 	 * go to jail
 	 */
 	public void goToJail() {
 		inJail = true;
+		playerPosition = 10;
 	}
 	
 	/*
@@ -72,12 +86,49 @@ public class TurnEngine {
 		jailCardCount--;
 	}
 	
+	public void addJailCard() {
+		jailCardCount++;
+	}
+	
+	public int getPLayerPosition() {
+		return playerPosition;
+	}
+	
+	public void setPlayerPosition(int playerPosition) {
+		this.playerPosition = playerPosition;
+	}
+	
+	/*
+	 * Nearest Railroad
+	 */
+	private int nearestRailroad(int position) {
+		if (position < 5 || position >= 35)
+			return 5;
+		else if (position < 15)
+			return 15;
+		else if ( position < 25)
+			return 25;
+		else
+			return 35;
+	}
+	
+	/*
+	 * Nearest Utility
+	 */
+	private int nearestUtility(int position) {
+		if (position < 12 || position >= 28)
+			return 12;
+		else
+			return 28;
+	}
+	
 	
 	/*
 	 * Simulates one complete player turn in Monopoly
 	 */
 	public void takeTurn(JailStrategy j) {
 		boolean takeAnotherTurn;
+		int moveAmount;
 		
 		if (inJail) {	//If the player starts the turn in jail, apply the selected jail strategy
 			j.strategyB(this);
@@ -101,14 +152,83 @@ public class TurnEngine {
 				return;
 			}
 			
-			
-			//TODO: Move the player based on dice total (die1 + die2)
-			
-			//TODO: Resolve the square landed on (board effects, cards, etc.
+			moveAmount = die1 + die2;
+			playerPosition = (playerPosition + moveAmount) % 40;
+			resolveSquare();
+			Board.land(playerPosition);
 			
 			takeAnotherTurn = isDoubles() && !isInJail();	//Player gets another turn only if they roll doubles and they were not sent to jail
 			
 		} while(takeAnotherTurn);
+	}
+	
+	/*
+	 * Resolve square method
+	 */
+	public void resolveSquare() {
+		boolean moved;
+		String square;
+		int oldPosition;
+		String card;
+		
+		do {
+			moved = false;
+			square = Board.getSquare(playerPosition);
+			
+			if (square.equals("Go To Jail"))
+				goToJail();						//Go to jail
+			else if (square.equals("Chance")) {
+				oldPosition = playerPosition;
+				card = deck.drawChance();		//Call deck logic
+				
+				
+				if (card.equals("Advance to GO"))		//Card effects
+					playerPosition = 0;
+				else if (card.equals("Advance to Illinois Avenue"))
+					playerPosition = 24;
+				else if (card.equals("Advance to St. Charles Place"))
+					playerPosition = 11;
+				else if (card.equals("Advance to nearest Utility"))
+					playerPosition = nearestUtility(playerPosition);
+				else if (card.equals("Advance to nearest Railroad"))
+					playerPosition = nearestRailroad(playerPosition);
+				else if (card.equals("Go to Jail")) {
+					goToJail();
+					return;
+				}
+				else if (card.equals("Take a trip to Reading Railroad"))
+					playerPosition = 5;
+				else if (card.equals("Take a walk on Boardwalk"))
+					playerPosition = 39;
+				else if (card.equals("Get Out of Jail Free"))
+					addJailCard();
+				else if (card.equals("Go Back 3 Spaces"))
+					playerPosition = (playerPosition + 37) % 40;
+				
+				if (playerPosition != oldPosition)
+					moved = true;
+				
+			}
+			else if (square.equals("Community Chest")) {
+				oldPosition = playerPosition;
+				card = deck.drawCommChest();	//Call deck logic
+				
+				if (card.equals("Advance to GO"))
+					playerPosition = 0;
+				else if (card.equals("Go to Jail")) {
+					goToJail();
+					return;
+				}
+				else if (card.equals("Get Out of Jail Free"))
+					addJailCard();
+				
+				if (playerPosition != oldPosition)
+					moved = true;
+			}
+		} while (moved);
+		
+		
+		
 	}
 	
 }
