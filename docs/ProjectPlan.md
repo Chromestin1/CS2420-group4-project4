@@ -53,9 +53,9 @@
 | Milestone | Target Date | Owner | Definition of Done | Status |
 |---|---|---|---|---|
 | Repo set up | April 14 | Ian | Repo created, instructor access granted | Done |
-| Core code complete | April 24 | All team | All classes compile and run end-to-end | In progress|
+| Core code complete | April 24 | All team | All classes compile and run end-to-end | Done |
 | Checkpoint | April 24th | Kathleen | /docs has plan + 2 artifacts, repo URL submitted | In progress |
-| JUnit tests complete | April 27th | Marcos| Edge cases covered, results documented | Not started |
+| JUnit tests complete | April 27th | Marcos| Edge cases covered, results documented | Done |
 | Final submission | May 1st  | All team  | Report, video, code packaged and submitted | Not Started |
 
 ## File Requirements
@@ -69,22 +69,30 @@
 Assignee: Ian 
 
 Status: Done
+
 https://github.com/Chromestin1/CS2430-group4-project4
 
 ### GameDriver.java
 Assignee: Marcos
 
-Status: 
+Status: Done
+
+https://github.com/Chromestin1/CS2430-group4-project4/blob/main/src/monopoly/GameDriver.java
+
 
 ### EngineTurn.java
 Assignee: Ian
 
-Status: 
+Status: Done
+
+https://github.com/Chromestin1/CS2430-group4-project4/blob/main/src/monopoly/TurnEngine.java
 
 ### Deck.java
 Assignee: Ian
 
-Status: 
+Status: Done
+
+https://github.com/Chromestin1/CS2430-group4-project4/blob/main/src/monopoly/Deck.java
 
 
 ### Board.java
@@ -95,54 +103,66 @@ Status:
 ### Results.java
 Assignee: Korbin
 
-Status: 
+Status: Done
+
+https://github.com/Chromestin1/CS2430-group4-project4/blob/main/src/monopoly/Board.java
 
 ### JailStrategy.java
 Assignee: Kat
 
-Status: 
+Status: Done
+
+https://github.com/Chromestin1/CS2430-group4-project4/blob/main/src/monopoly/JailStrategy.java
 
 
 ### JUnit test suite
 Assignee: Marcos
 
-Status: 
+Status: Done
+
+https://github.com/Chromestin1/CS2430-group4-project4/tree/main/test/monopoly
 
 ### UML diagram
 Assignee: Kathleen
 
-Status: 
+Status:  Done
 
-### Scope Document
+https://github.com/Chromestin1/CS2430-group4-project4/blob/main/docs/UMLproject4.png
+
+### Design Document
 Assignee: Kathleen
 
-Status: 
+Status: Done
+
+https://github.com/Chromestin1/CS2430-group4-project4/blob/main/docs/Design%20Notes%20%20Project%204.md
 
 ### Project plan 
 Assignee: Kathleen
 
 Status: Done
 
+https://github.com/Chromestin1/CS2430-group4-project4/blob/main/docs/ProjectPlan.md
+
 ### Checkpoint 
 Assignee: Kathleen
 
-Status: 
+Status: In progress. Done after Canvas submit
 
 ### Final report
 Assignee: All team
 
-Status: 
+Status: Not started 
 
 ### Team video
 Assignee: 
 
-Status:
+Status: Not started 
 
 ## Update Log
 | Date | Summary | Link |
 |---|---|---|
-| Date  | Event  | Evidence |
-| Date  | Event  | Evidence |
-| Date  | Event  | Evidence |
+| April 13th  | Team Kickoff Meeting  | In Class |
+| April 15th   | UML and division of work  | In class |
+| April 24th   | Checkpoint Submitted  | Canvas Submit |
 | Date  | Event  | Evidence |
 
