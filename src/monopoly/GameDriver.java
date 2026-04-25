@@ -26,20 +26,14 @@ public class GameDriver {
      * Square names in board order (indices 0-39).
      * Kept here for output formatting since Board.boardSquares is private.
      */
-    private static final String[] BOARD_SQUARES = {
-        "Go", "Mediterranean Avenue", "Community Chest", "Baltic Avenue",
-        "Income Tax", "Reading Railroad", "Oriental Avenue", "Chance",
-        "Vermont Avenue", "Connecticut Avenue", "Just Visiting/Jail",
-        "St. Charles Place", "Electric Company", "States Avenue",
-        "Virginia Avenue", "Pennsylvania Railroad", "St. James Place",
-        "Community Chest", "Tennessee Avenue", "New York Avenue",
-        "Free Parking", "Kentucky Avenue", "Chance", "Indiana Avenue",
-        "Illinois Avenue", "B&O Railroad", "Atlantic Avenue",
-        "Ventnor Avenue", "Water Works", "Marvin Gardens", "Go To Jail",
-        "Pacific Avenue", "North Carolina Avenue", "Community Chest",
-        "Pennsylvania Avenue", "Short Line Railroad", "Chance",
-        "Park Place", "Luxury Tax", "Boardwalk"
-    };
+    private static final String[] BOARD_SQUARES = {"Go", "Mediterranean Avenue", "Community Chest 1", "Baltic Avenue", "Income Tax", "Reading Railroad", 
+			"Oriental Avenue", "Chance 1", "Vermont Avenue", "Connecticut Avenue", "Just Visiting/Jail", "St. Charles Place", 
+			"Electric Company", "States Avenue", "Virginia Avenue", "Pennsylvania Railroad", "St. James Place", "Community Chest 2", 
+			"Tennessee Avenue", "New York Avenue", "Free Parking", "Kentucky Avenue", "Chance 2", "Indiana Avenue", "Illinois Avenue",
+			"B&O Railroad", "Atlantic Avenue", "Ventnor Avenue", "Water Works", "Marvin Gardens", "Go To Jail", "Pacific Avenue",
+			"North Carolina Avenue", "Community Chest 3", "Pennsylvania Avenue", "Short Line Railroad", "Chance 3", "Park Place",
+			"Luxury Tax", "Boardwalk"};
+
 
     /**
      * Runs a single simulation of n turns using the given jail strategy.

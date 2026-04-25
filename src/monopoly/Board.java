@@ -4,13 +4,15 @@ import java.util.HashMap;
 
 public class Board {
 
-	private static String [] boardSquares = {"Go", "Mediterranean Avenue", "Community Chest", "Baltic Avenue", "Income Tax", "Reading Railroad", 
-			"Oriental Avenue", "Chance", "Vermont Avenue", "Connecticut Avenue", "Just Visiting/Jail", "St. Charles Place", 
-			"Electric Company", "States Avenue", "Virginia Avenue", "Pennsylvania Railroad", "St. James Place", "Community Chest", 
-			"Tennessee Avenue", "New York Avenue", "Free Parking", "Kentucky Avenue", "Chance", "Indiana Avenue", "Illinois Avenue",
+	private static String [] boardSquares = {"Go", "Mediterranean Avenue", "Community Chest 1", "Baltic Avenue", "Income Tax", "Reading Railroad", 
+			"Oriental Avenue", "Chance 1", "Vermont Avenue", "Connecticut Avenue", "Just Visiting/Jail", "St. Charles Place", 
+			"Electric Company", "States Avenue", "Virginia Avenue", "Pennsylvania Railroad", "St. James Place", "Community Chest 2", 
+			"Tennessee Avenue", "New York Avenue", "Free Parking", "Kentucky Avenue", "Chance 2", "Indiana Avenue", "Illinois Avenue",
 			"B&O Railroad", "Atlantic Avenue", "Ventnor Avenue", "Water Works", "Marvin Gardens", "Go To Jail", "Pacific Avenue",
-			"North Carolina Avenue", "Community Chest", "Pennsylvania Avenue", "Short Line Railroad", "Chance", "Park Place",
+			"North Carolina Avenue", "Community Chest 3", "Pennsylvania Avenue", "Short Line Railroad", "Chance 3", "Park Place",
 			"Luxury Tax", "Boardwalk"};
+
+
 
 	private static HashMap<String, Integer> landingCounts = new HashMap<>(); 
 	
