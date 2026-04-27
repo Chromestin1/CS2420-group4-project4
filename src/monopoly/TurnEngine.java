@@ -191,7 +191,9 @@ public class TurnEngine {
 
 			if (square.equals("Go To Jail"))
 				goToJail(); // Go to jail
-			else if (square.equals("Chance")) {
+			else if (square.equals("Chance 1") ||
+					square.equals("Chance 2") ||
+					square.equals("Chance 3")) {
 				oldPosition = playerPosition;
 				card = deck.drawChance(); // Call deck logic
 
@@ -220,7 +222,9 @@ public class TurnEngine {
 				if (playerPosition != oldPosition)
 					moved = true;
 
-			} else if (square.equals("Community Chest")) {
+			} else if (square.equals("Community Chest 1") ||
+					square.equals("Community Chest 2") ||
+					square.equals("Community Chest 3")) {
 				oldPosition = playerPosition;
 				card = deck.drawCommChest(); // Call deck logic
 
