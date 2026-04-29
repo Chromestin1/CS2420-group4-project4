@@ -1,1 +1,3 @@
-# CS2420-group4-project4
+#1 Download all files in src folder Board.java, Deck.java, GameDriver.java, JailStrategy.java, JailStrategy.java, Results.java, and TurnEngine.java
+#2 Open GameDriver.java in IDE
+#3 Click run to execute all simulations
