@@ -6,13 +6,8 @@ package monopoly;
  * @author KatM
  */
 
-// TurnEngine must implement these for this class to work: getJailCardCount(),
-// setInJail(), useJailCard(), isDoubles(), rollDice()
 public class JailStrategy {
 
-	/*
-	 * TODO
-	 */
 	private String name;
 
 	public JailStrategy(String name) {
@@ -64,6 +59,11 @@ public class JailStrategy {
 
 	}
 
+	/**
+	 * getter for the strategy name
+	 * 
+	 * @return name of the specific strategy
+	 */
 	public String getName() {
 		return name;
 	}
